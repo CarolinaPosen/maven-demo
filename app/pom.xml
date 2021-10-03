@@ -5,20 +5,34 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
+        <groupId>by.itacademy.jee</groupId>
         <artifactId>maven-demo</artifactId>
-        <groupId>by.itademy.jee</groupId>
         <version>1.0.1-SNAPSHOT</version>
     </parent>
 
     <artifactId>app</artifactId>
 
+    <packaging>war</packaging>
+
     <dependencies>
+        <!--        <dependency>
+                    <groupId>by.itacademy.jee</groupId>
+                    <artifactId>logic</artifactId>
+                    <version>1.0.1-SNAPSHOT</version>
+                </dependency>-->
         <dependency>
-            <groupId>by.itademy.jee</groupId>
-            <artifactId>logic</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.2</version>
         </dependency>
     </dependencies>
-
-
+    <build>
+    <finalName>web-app</finalName>
+    </build>
 </project>
